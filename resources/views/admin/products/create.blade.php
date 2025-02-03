@@ -1,4 +1,4 @@
-@include( view: 'layouts.adminfrontend' )
+@include(  'layouts.adminfrontend' )
 
 <div class="flex justify-center items-center min-h-screen bg-gray-900">
     <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data" class="bg-gray-800 text-white p-6 rounded-lg shadow-lg max-w-xl w-full space-y-4">

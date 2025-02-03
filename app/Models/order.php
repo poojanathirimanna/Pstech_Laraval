@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Models;
 
+namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,15 +9,18 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'total_price', 'address', 'payment_method', 'order_date'];
+    protected $fillable = [
+        'user_id',
+        'customer_name',
+        'customer_email',
+        'customer_address',
+        'customer_phone',
+        'product_ids',
+        'total_price',
+        'payment_method',
+    ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    public function products()
-    {
-        return $this->belongsToMany(Product::class, 'cart')->withPivot('quantity');
-    }
+    protected $casts = [
+        'product_ids' => 'array', // Automatically convert JSON to array
+    ];
 }

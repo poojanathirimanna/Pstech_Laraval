@@ -38,11 +38,20 @@
             </tbody>
         </table>
         <div class="mt-6 text-right">
-            <form action="{{ route('cart.checkout') }}" method="POST">
-                @csrf
-                <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg">Checkout</button>
-            </form>
-        </div>
+    <!-- <form action="{{ route('checkout.index') }}" method="POST">
+        @csrf
+        <button type="submit" class="btn btn-success">Checkout</button>
+    </form> -->
+
+    <a 
+    href="{{ route('checkout.index') }}" 
+    class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out"
+>
+    GO
+</a>
+
+</div>
+
     @endif
 </div>
 

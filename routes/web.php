@@ -7,6 +7,8 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
 
 
@@ -88,8 +90,24 @@ Route::middleware('auth')->group(function () {
     Route::post('cart/add', [CartController::class, 'add'])->name('cart.add');
     Route::post('cart/update/{id}', [CartController::class, 'update'])->name('cart.update');
     Route::post('cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
-    Route::post('cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+    Route::post('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
 });
+
+// Routes for Checkout without middleware
+Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+
+Route::get('checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+Route::get('order/{order}', [OrderController::class, 'show'])->name('order.show');
+
+Route::get('admin/orders', [OrderController::class, 'index'])->name('admin.orders.index');
+Route::get('admin/orders/{order}', [OrderController::class, 'show'])->name('admin.orders.show');
+
+
+
+
+
 
 
 

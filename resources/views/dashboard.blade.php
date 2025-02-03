@@ -1,5 +1,5 @@
 @extends('layouts.frontend1')
-@section('pages')
+
 
 <!-- User Welcome Section -->
 
@@ -84,4 +84,4 @@
         </div>
     </div>
 </main>
-@endsection
+

@@ -31,29 +31,34 @@ class ProductController extends Controller
 
     // Store new product (admin only)
     public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'price' => 'required|numeric|min:0',
-            'stock' => 'required|integer|min:0',
-            'category_id' => 'required|exists:categories,id',
-            'image' => 'nullable|image|max:2048',
-        ]);
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'price' => 'required|numeric|min:0',
+        'stock' => 'required|integer|min:0',
+        'category_id' => 'required|exists:categories,id',
+        'image' => 'nullable|image|max:2048',
+    ]);
 
-        $imagePath = $request->file('image') ? $request->file('image')->store('images', 'public') : null;
+    $imagePath = $request->file('image') 
+        ? $request->file('image')->store('images', 'public') 
+        : null;
 
-        Product::create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'price' => $request->price,
-            'stock' => $request->stock,
-            'category_id' => $request->category_id,
-            'image' => $imagePath,
-        ]);
+    Product::create([
+        'name' => $request->name,
+        'description' => $request->description,
+        'price' => $request->price,
+        'stock' => $request->stock,
+        'category_id' => $request->category_id,
+        'image' => $imagePath,
+    ]);
 
-        return redirect()->route('admin.products.index')->with('success', 'Product added successfully!');
-    }
+    // Ensure a RedirectResponse is returned
+    return redirect()->route('admin.products.index')
+        ->with('success', 'Product added successfully!');
+}
+
 
     // Show edit product form (admin only)
     public function edit(Product $product)

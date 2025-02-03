@@ -29,9 +29,7 @@
         <!-- Sidebar -->
         <aside class="w-64 bg-gray-900 text-white h-screen p-4">
             <ul class="space-y-4">
-                <li class="hover:bg-gray-700 p-2 rounded">
-                    <a href="#" class="block">Dashboard</a>
-                </li>
+               
                 <li class="hover:bg-gray-700 p-2 rounded">
                 <a href="{{ route('admin.categories.index') }}">Categories</a>
                 </li>
@@ -39,44 +37,41 @@
                     <a href="{{ route('admin.products.index') }}">Manage Products</a>
                 </li>
                 <li class="hover:bg-gray-700 p-2 rounded">
-                    <a href="#" class="block">View Orders</a>
-                </li>
-                <li class="hover:bg-gray-700 p-2 rounded">
-                    <a href="#" class="block">Settings</a>
+                <a href="{{ route('admin.orders.index') }}" class="nav-link">View Orders</a>
                 </li>
             </ul>
         </aside>
 
         <!-- Main Content -->
         <main class="flex-1 p-6 bg-white">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">Welcome, Admin!</h2>
+            <h2 class="text-5x2 text-center font-bold text-gray-800 mb-6">Welcome, Admin!</h2>
 
             <!-- Stats Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"> -->
                 <!-- Card 1 -->
-                <div class="bg-blue-500 text-white p-4 rounded shadow">
+                <!-- <div class="bg-blue-500 text-white p-4 rounded shadow">
                     <h3 class="text-lg font-bold">Users</h3>
                     <p class="text-3xl mt-2">150</p>
-                </div>
+                </div> -->
                 <!-- Card 2 -->
-                <div class="bg-green-500 text-white p-4 rounded shadow">
+                <!-- <div class="bg-green-500 text-white p-4 rounded shadow">
                     <h3 class="text-lg font-bold">Products</h3>
                     <p class="text-3xl mt-2">320</p>
-                </div>
+                </div> -->
                 <!-- Card 3 -->
-                <div class="bg-yellow-500 text-white p-4 rounded shadow">
+                <!-- <div class="bg-yellow-500 text-white p-4 rounded shadow">
                     <h3 class="text-lg font-bold">Orders</h3>
                     <p class="text-3xl mt-2">85</p>
-                </div>
+                </div> -->
                 <!-- Card 4 -->
-                <div class="bg-red-500 text-white p-4 rounded shadow">
+                <!-- <div class="bg-red-500 text-white p-4 rounded shadow">
                     <h3 class="text-lg font-bold">Revenue</h3>
                     <p class="text-3xl mt-2">$5,250</p>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Recent Activities -->
-            <div class="mt-6">
+            <!-- <div class="mt-6">
                 <h3 class="text-xl font-bold text-gray-800 mb-4">Recent Activities</h3>
                 <table class="w-full bg-white shadow-md rounded">
                     <thead class="bg-gray-200 text-gray-700">
@@ -104,7 +99,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
         </main>
     </div>
 
