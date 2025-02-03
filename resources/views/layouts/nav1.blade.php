@@ -6,24 +6,33 @@
     </div>
 
     <!-- Navigation Links -->
-    <nav class="flex space-x-8 text-lg font-medium">
+    <!-- <nav class="flex space-x-8 text-lg font-medium">
         <a href="./services.php" class="hover:text-[#F7941D] transition duration-300">
-            Services
+            Services -->
         </a>
-        <a href="./contact.php" class="hover:text-[#F7941D] transition duration-300">
-            Contact
+        <!-- <a href="./contact.php" class="hover:text-[#F7941D] transition duration-300">
+            Contact -->
         </a>
     </nav>
 
     <!-- User Section -->
+
+    @livewire('product-search')
     <div class="flex items-center space-x-6">
         <span class="text-lg font-semibold">
+            @auth
             Welcome, {{ Auth::user()->name }}!
+            @endauth
         </span>
+        
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button type="submit" class="text-white bg-[#F7941D] py-2 px-4 rounded hover:bg-[#f5a728] transition duration-300">
-                Sign Out
+            @auth
+            Sign Out
+            @else
+            Log In
+            @endauth
             </button>
         </form>
     </div>

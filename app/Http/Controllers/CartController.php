@@ -96,6 +96,6 @@ class CartController extends Controller
         // For example, save the order to the database here
 
         // Redirect to the laptops page after checkout
-        return redirect()->route('laptops.index')->with('success', 'Order placed successfully! Total: ' . number_format($totalPrice, 2) . ' LKR');
+       
     }
 }
