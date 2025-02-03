@@ -33,7 +33,7 @@
     </head>
 <body >
     <!-- Navigation Bar -->
-    @include('layouts.nav')
+    @include('layouts.nav1')
 
     <!-- Side Navigation Bar -->
     @include('layouts.sidebar1')
