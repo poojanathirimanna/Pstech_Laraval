@@ -16,11 +16,6 @@
         <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('motherboards') ? 'bg-gray-800' : '' }}">
             <a href="{{ route('pages.motherboards') }}" class="block">Motherboards</a>
         </li>
-        <!-- <li class="mt-4">
-                <a href="{{ route('cart.index') }}" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                    View Cart ({{ \App\Models\Cart::where('user_id', Auth::id())->count() }})
-                </a> -->
-        </li>
     </ul>
 </aside>
 

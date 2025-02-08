@@ -16,11 +16,11 @@ use App\Http\Controllers\OrderController;
 
 
 Route::get('/', [PageController::class, 'index'])->name('welcome');
-Route::get('/laptops', [PageController::class, 'laptops'])->name('pages.laptops');
-Route::get('/graphiccards', [PageController::class, 'graphicCards'])->name('pages.graphiccards');
-Route::get('/rams', [PageController::class, 'ram'])->name('pages.rams');
-Route::get('/processors', [PageController::class, 'processors'])->name('pages.processors');
-Route::get('/motherboards', [PageController::class, 'motherboards'])->name('pages.motherboards');
+// Route::get('/laptops', [PageController::class, 'laptops'])->name('pages.laptops');
+// Route::get('/graphiccards', [PageController::class, 'graphicCards'])->name('pages.graphiccards');
+// Route::get('/rams', [PageController::class, 'ram'])->name('pages.rams');
+// Route::get('/processors', [PageController::class, 'processors'])->name('pages.processors');
+// Route::get('/motherboards', [PageController::class, 'motherboards'])->name('pages.motherboards');
 
 
 // Route::get('/index1', [PageController::class, 'index1'])->name('welcome');
