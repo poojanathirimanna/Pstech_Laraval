@@ -111,14 +111,6 @@ class ProductController extends Controller
     // Pass the graphic cards to the view
     return view('pages.graphiccards', compact('graphicCards'));
     }
-    public function rams()
-{
-    // Fetch products where category_id matches RAM
-    $rams = Product::where('category_id', 3)->get(); // 3 is the ID for RAMs
-
-    // Pass the RAMs to the view
-    return view('pages.rams', compact('rams'));
-}
 
     public function processors()
     {
@@ -136,4 +128,9 @@ class ProductController extends Controller
     // Pass the motherboards to the view
     return view('pages.motherboards', compact('motherboards'));
     }
+
+    
 }
+
+
+

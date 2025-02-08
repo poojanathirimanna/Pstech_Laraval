@@ -14,6 +14,7 @@ use App\Http\Controllers\OrderController;
 
 
 
+
 Route::get('/', [PageController::class, 'index'])->name('welcome');
 Route::get('/laptops', [PageController::class, 'laptops'])->name('pages.laptops');
 Route::get('/graphiccards', [PageController::class, 'graphicCards'])->name('pages.graphiccards');
@@ -25,10 +26,16 @@ Route::get('/motherboards', [PageController::class, 'motherboards'])->name('page
 // Route::get('/index1', [PageController::class, 'index1'])->name('welcome');
 
 //Dashboard routes
-Route::get('admin/dashboard', [AdminDashboardController::class, 'index'])
-    ->middleware(['auth','admin']) // Ensure only authenticated users can access
-    ->name('dashboard');
-route::get('/dashboard', function(){return view('dashboard');})->middleware(['auth'])->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+    route::get('/dashboard', function(){return view('dashboard');})->middleware(['auth'])->name('dashboard');
+
+});
+
+
+
+
+
 
 
 //Profile routes

@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
-
 class AuthenticatedSessionController extends Controller
 {
     /**
@@ -25,14 +24,21 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-        // Authenticate user
         $request->authenticate();
 
-        // Get authenticated user
         $user = Auth::user();
 
-        // Create token with user email as name
         $token = $user->createToken($user->email);
+        
+        if ($request->user()->usertype == 'admin')
+        {
+            return redirect()->route('admin/dashboard');
+        }
+
+        return redirect()->route('dashboard');
+
+
+
 
         // Store token in session if session is available
         if ($request->hasSession()) {
@@ -40,7 +46,6 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerate();
         }
 
-        // Always check for JSON before redirecting
         if ($request->wantsJson()) {
             return response()->json([
                 'status' => true,
@@ -51,8 +56,8 @@ class AuthenticatedSessionController extends Controller
             ], 200);
         }
 
-        return redirect()->route('dashboard');
-        return redirect()->intended(route('dashboard') );
+
+
     }
 
     /**
@@ -73,19 +78,18 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerateToken();
         }
 
-        // Logout user
-        Auth::guard('web')->logout();
+         // Logout user
+         Auth::guard('web')->logout();
 
-        $response = [
-            'status' => true,
-            'message' => 'Logged out successfully'
-        ];
-
-        if ($request->expectsJson()) {
-            return new JsonResponse($response, 200);
-        }
-
-
-        return redirect('/');
-    }
+         $response = [
+             'status' => true,
+             'message' => 'Logged out successfully'
+         ];
+ 
+         if ($request->expectsJson()) {
+             return response()->json($response, 200);
+         }
+ 
+         return redirect('/');
+     }
 }
