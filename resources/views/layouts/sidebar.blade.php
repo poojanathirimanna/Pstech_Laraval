@@ -7,9 +7,9 @@
         <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('graphic-cards') ? 'bg-gray-800' : '' }}">
             <a href="{{ route('pages.graphiccards') }}" class="block">Graphic Cards</a>
         </li>
-        <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('ram') ? 'bg-gray-800' : '' }}">
+        <!-- <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('ram') ? 'bg-gray-800' : '' }}">
             <a href="{{ route('pages.rams') }}" class="block">RAM</a>
-        </li>
+        </li> -->
         <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('processors') ? 'bg-gray-800' : '' }}">
             <a href="{{ route('pages.processors') }}" class="block">Processors</a>
         </li>
@@ -18,7 +18,7 @@
         </li>
         <li class="mt-4">
                 <a href="{{ route('cart.index') }}" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
-                    View Cart ({{ \App\Models\Cart::where('user_id', Auth::id())->count() }})
+                    View Cart
                 </a>
         </li>
     </ul>

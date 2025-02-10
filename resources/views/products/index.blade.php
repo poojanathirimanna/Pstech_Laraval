@@ -1,5 +1,5 @@
 
-<h1 class="text-2xl font-bold mb-6">Products</h1>
+<h1 class="text-2xl font-bold mb-6">Products1111</h1>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     @foreach($products as $product)
         <div class="p-4 bg-gray-800 rounded-lg shadow-md">

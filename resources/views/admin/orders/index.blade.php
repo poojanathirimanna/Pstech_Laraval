@@ -16,8 +16,7 @@
                             <th>Order ID</th>
                             <th>Customer Name</th>
                             <th>Email</th>
-                            <th>Total Price</th>
-                            <th>Status</th>
+                            <th>Payment method</th>
                             <th>Order Date</th>
                             <th>Actions</th>
                         </tr>
@@ -28,8 +27,7 @@
                                 <td>{{ $order->id }}</td>
                                 <td>{{ $order->customer_name }}</td>
                                 <td>{{ $order->customer_email }}</td>
-                                <td>LKR {{ number_format($order->total_price, 2) }}</td>
-                                <td>{{ $order->status }}</td>
+                                <td>{{ $order->payment_method }}</td>
                                 <td>{{ $order->created_at->format('Y-m-d') }}</td>
                                 <td>
                                     <a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-sm btn-info">View</a>

@@ -17,6 +17,9 @@
                 <h3 class="text-2xl font-semibold text-[#F7941D] mb-2">{{ $product->name }}</h3>
                 <p class="text-gray-300 mb-2">{{ $product->description }}</p>
                 <p class="text-yellow-400 font-bold mb-4">Price: ${{ $product->price }}</p>
+                <p class="text-green-400 font-bold mb-4">
+                    Available Stock: {{ $product->stock ?? 'N/A' }}
+                </p>
                 <div class="flex justify-between">
                     <a href="{{ route('admin.products.edit', $product->id) }}" 
                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">

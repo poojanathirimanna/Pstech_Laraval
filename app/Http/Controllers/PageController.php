@@ -19,7 +19,7 @@ class PageController extends Controller
     {
         return view('pages.graphiccards');
     }
-    public function ram()
+    public function rams()
     {
         return view('pages.rams');
     }

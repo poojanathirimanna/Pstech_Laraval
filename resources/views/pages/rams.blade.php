@@ -1,8 +1,8 @@
-@extends('layouts.frontend1')
+<!-- @extends('layouts.frontend1')
 
 @section('pages')
 <main class="p-8 bg-gray-900 text-white">
-    <h1 class="text-3xl  text-center font-bold mb-6"><b>RAM</b></h1>
+    <h1 class="text-3xl  text-center font-bold mb-6"><b>RAMS </b></h1>
 
     @if($rams->isEmpty())
         <p class="text-center text-gray-400">No laptops available at the moment.</p>
@@ -15,8 +15,8 @@
                     <p class="text-gray-400 text-sm">{{ $ram->description }}</p>
                     <p class="text-yellow-400 text-lg font-bold mt-2">{{ number_format($ram->price, 2) }} LKR</p>
 
-                    <!-- Add to Cart Form -->
-                    <form action="{{ route('cart.add') }}" method="POST" class="mt-4">
+                    <Add to Cart Form -->
+                    <!-- <form action="{{ route('cart.add') }}" method="POST" class="mt-4">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $ram->id }}">
                         <div class="flex items-center space-x-4">
@@ -37,5 +37,5 @@
             @endforeach
         </div>
     @endif
-</main>
-@endsection
+</main> -->
+<!-- @endsection --> 

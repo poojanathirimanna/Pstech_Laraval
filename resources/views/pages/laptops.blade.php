@@ -1,16 +1,16 @@
 @extends('layouts.frontend1')
 
 @section('pages')
-<main class="p-8 bg-gray-900 text-white">
-    <h1 class="text-3xl font-bold mb-6">Laptops</h1>
+<main class="p-8 bg-gray-900 text-white ml-16">
+    <h1 class="text-3xl text-center font-bold mb-6">Laptops</h1>
 
     @if($laptops->isEmpty())
         <p class="text-center text-gray-400">No laptops available at the moment.</p>
     @else
-        <div class="grid grid-cols-1  md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             @foreach($laptops as $laptop)
                 <div class="bg-gray-800 rounded-lg shadow-md p-4 transition duration-300 hover:scale-105">
-                    <img src="{{ Storage::url($laptop->image) }}" alt="{{ $laptop->name }}" class="w-full h-48 object-cover rounded">
+                    <img src="{{ Storage::url($laptop->image) }}" alt="{{ $laptop->name }}" class="w-full h-64 object-contain rounded">
                     <h2 class="text-xl font-semibold mt-4">{{ $laptop->name }}</h2>
                     <p class="text-gray-400 text-sm">{{ $laptop->description }}</p>
                     <p class="text-yellow-400 text-lg font-bold mt-2">{{ number_format($laptop->price, 2) }} LKR</p>
@@ -38,4 +38,5 @@
         </div>
     @endif
 </main>
+
 @endsection

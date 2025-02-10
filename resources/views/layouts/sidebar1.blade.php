@@ -7,8 +7,8 @@
         <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('graphic-cards') ? 'bg-gray-800' : '' }}">
             <a href="{{ route('pages.graphiccards') }}" class="block">Graphic Cards</a>
         </li>
-        <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('ram') ? 'bg-gray-800' : '' }}">
-            <a href="{{ route('pages.rams') }}" class="block">RAM</a>
+        <!-- <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('ram') ? 'bg-gray-800' : '' }}">
+            <a href="{{ route('pages.rams') }}" class="block">RAM</a> -->
         </li>
         <li class="hover:bg-gray-800 p-2 rounded {{ request()->is('processors') ? 'bg-gray-800' : '' }}">
             <a href="{{ route('pages.processors') }}" class="block">Processors</a>

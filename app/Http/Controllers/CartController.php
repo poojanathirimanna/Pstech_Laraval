@@ -17,7 +17,13 @@ class CartController extends Controller
             ->where('user_id', Auth::id())
             ->get();
 
-        return view('cart.index', compact('cartItems'));
+        // Calculate the total price of all items in the cart
+        $totalPrice = $cartItems->sum(function ($item) {
+            return $item->quantity * $item->price;
+        });
+
+        // Pass total price along with cart items to the view
+        return view('cart.index', compact('cartItems', 'totalPrice'));
     }
 
     // Add Item to Cart
@@ -92,10 +98,7 @@ class CartController extends Controller
             return $item->quantity * $item->price;
         });
 
-        // Placeholder for order creation logic
-        // For example, save the order to the database here
-
-        // Redirect to the laptops page after checkout
-       
+        // Pass the total price and cart items to the checkout page
+        return view('checkout.index', compact('cartItems', 'totalPrice'));
     }
 }

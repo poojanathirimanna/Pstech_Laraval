@@ -30,7 +30,7 @@ class AuthenticatedSessionController extends Controller
 
         $token = $user->createToken($user->email);
         
-        if ($request->user()->role == 'admin')
+        if ($request->user()->role === 'admin')
         {
             return redirect()->route('admin.dashboard');
         }

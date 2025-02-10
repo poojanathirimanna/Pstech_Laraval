@@ -12,7 +12,7 @@
             <p><strong>Email:</strong> {{ $order->customer_email }}</p>
             <p><strong>Address:</strong> {{ $order->customer_address }}</p>
             <p><strong>Phone:</strong> {{ $order->customer_phone }}</p>
-            <p><strong>Total Price:</strong> LKR {{ number_format($order->total_price, 2) }}</p>
+            <!-- <p><strong>Total Price:</strong> LKR {{ number_format($order->total_price, 2) }}</p> -->
             <p><strong>Status:</strong> {{ $order->status }}</p>
             <p><strong>Order Date:</strong> {{ $order->created_at->format('Y-m-d') }}</p>
             <p><strong>Products:</strong></p>

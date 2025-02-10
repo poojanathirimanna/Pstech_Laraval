@@ -39,8 +39,8 @@
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="payment_method" id="pay_online" value="Pay Online" required>
-                                <label class="form-check-label" for="pay_online">
+                                <input class="form-check-input" type="radio" name="payment_method" id="Store Pickup" value="Store Pickup" required>
+                                <label class="form-check-label" for="Store Pickup">
                                     Store Pickup
                                 </label>
                             </div>

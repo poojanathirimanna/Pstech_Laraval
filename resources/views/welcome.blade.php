@@ -22,7 +22,7 @@
             <p>we offer everything you need to build or upgrade your gaming rig. Perfect for gamers and tech enthusiasts seeking quality, reliability, and top-notch performance.!</p>
             <br>
             <br>
-            <a href="/laptops" class="btn custom-view-more-btn">VIEW MORE</a>
+            <a href="/laptops" class="btn custom-view-more-btn text-[#F7941D]">VIEW MORE</a>
 
         </div>
     </div>
@@ -37,7 +37,7 @@
             <p>Embark on a journey of innovation with our cutting-edge products designed for building new experiences. Whether it's creating immersive gaming setups or crafting state-of-the-art PC builds, we provide the tools and accessories to transform your vision into reality. </p>
             <br>
             <br> 
-            <a href="/products" class="btn custom-view-more-btn">VIEW MORE</a>
+            <a href="/laptops" class="btn custom-view-more-btn text-[#F7941D]">VIEW MORE</a>
         </div>
     </div>
 
@@ -51,7 +51,7 @@
             <p>Turn your vision into reality with our customizable options to create your dream setup. Whether it’s a high-performance gaming rig or a sleek workstation, we offer the flexibility and components to design a setup that perfectly matches your needs.</p>
             <br>
             <br>
-            <a href="/products" class="btn custom-view-more-btn">VIEW MORE</a>
+            <a href="/laptops" class="btn custom-view-more-btn text-[#F7941D]">VIEW MORE</a>
         </div>
     </div>
 </div>
