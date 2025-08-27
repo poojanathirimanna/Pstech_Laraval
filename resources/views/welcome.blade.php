@@ -156,52 +156,57 @@
 </section>
 
 <!-- Professional Product Showcase with Dark Elegant Theme -->
-<section class="py-24 bg-gradient-to-b from-slate-100 to-white">
-    <div class="max-w-7xl mx-auto px-6">
+<section class="relative py-24 bg-gradient-to-b from-slate-800 via-slate-900 to-blue-900 overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
         <!-- Premium Section Header -->
         <div class="text-center mb-20">
             <div class="inline-flex items-center justify-center mb-8">
-                <div class="h-px bg-gradient-to-r from-transparent via-slate-400 to-transparent w-32"></div>
-                <span class="mx-8 px-6 py-3 bg-gradient-to-r from-slate-800 to-slate-700 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-xl">
+                <div class="h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent w-32"></div>
+                <span class="mx-8 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-xl border border-blue-500">
                     ✦ Featured Collection ✦
                 </span>
-                <div class="h-px bg-gradient-to-r from-transparent via-slate-400 to-transparent w-32"></div>
+                <div class="h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent w-32"></div>
             </div>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Latest <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">Arrivals</span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Latest <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400">Arrivals</span>
             </h2>
-            <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p class="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
                 Discover our curated selection of premium components, engineered for exceptional performance and cutting-edge innovation.
             </p>
         </div>
 
         <!-- Premium Product Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
             <!-- Product 1: RTX 4080 - Blue Theme -->
-            <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-slate-200">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-50/60 to-indigo-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div class="group relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-blue-500/20 transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-white/20 hover:border-blue-400/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 
-                <div class="relative p-8">
+                <div class="relative p-10">
                     <!-- Product Badge -->
                     <div class="absolute top-6 right-6 z-10">
-                        <span class="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold rounded-full shadow-lg border border-blue-400">
+                        <span class="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold rounded-full shadow-lg border border-blue-400/50 backdrop-blur-sm">
                             ✦ NEW ARRIVAL ✦
                         </span>
                     </div>
 
                     <!-- Product Image -->
-                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100/20 to-slate-200/20 backdrop-blur-sm p-8 border border-white/10">
                         <img src="{{asset('images/rtx4080.png')}}" alt="MSI RTX 4080 SUPER" 
                              class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
                         
                         <!-- Hover Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                     </div>
 
                     <!-- Product Info -->
                     <div class="space-y-5">
                         <!-- Product Category -->
-                        <div class="flex items-center text-sm text-slate-500 uppercase tracking-wider font-semibold">
+                        <div class="flex items-center text-sm text-slate-300 uppercase tracking-wider font-semibold">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
                             </svg>
@@ -209,15 +214,15 @@
                         </div>
 
                         <!-- Product Title -->
-                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                             MSI RTX 4080 SUPER GAMING SLIM 16GB
                         </h3>
 
                         <!-- Features -->
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">16GB GDDR6X</span>
-                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded-full border border-emerald-200">4K Ready</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full border border-purple-200">Ray Tracing</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full border border-blue-400/30 backdrop-blur-sm">16GB GDDR6X</span>
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full border border-emerald-400/30 backdrop-blur-sm">4K Ready</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-400/30 backdrop-blur-sm">Ray Tracing</span>
                         </div>
 
                         <!-- Rating and Price -->
@@ -227,21 +232,21 @@
                                     <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
                                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                                     </svg>
-                                    <span class="text-sm text-slate-700 ml-1 font-semibold">4.9</span>
+                                    <span class="text-sm text-slate-200 ml-1 font-semibold">4.9</span>
                                 </div>
-                                <span class="text-sm text-slate-500">(127 reviews)</span>
+                                <span class="text-sm text-slate-400">(127 reviews)</span>
                             </div>
                         </div>
 
                         <!-- Price -->
-                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
                                     529,000
                                 </span>
-                                <span class="text-lg text-slate-600 ml-1 font-semibold">LKR</span>
+                                <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-blue-500">
+                            <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-blue-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
@@ -250,30 +255,30 @@
             </div>
 
             <!-- Product 2: ASUS Motherboard - Purple Theme -->
-            <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-slate-200">
-                <div class="absolute inset-0 bg-gradient-to-br from-purple-50/60 to-pink-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div class="group relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-white/20 hover:border-purple-400/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 
-                <div class="relative p-8">
+                <div class="relative p-10">
                     <!-- Product Badge -->
                     <div class="absolute top-6 right-6 z-10">
-                        <span class="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold rounded-full shadow-lg border border-purple-400">
+                        <span class="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold rounded-full shadow-lg border border-purple-400/50 backdrop-blur-sm">
                             ✦ BESTSELLER ✦
                         </span>
                     </div>
 
                     <!-- Product Image -->
-                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100/20 to-slate-200/20 backdrop-blur-sm p-8 border border-white/10">
                         <img src="{{asset('images/ASUS ROG STRIX Z790.png')}}" alt="ASUS ROG MAXIMUS Z790" 
                              class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
                         
                         <!-- Hover Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                     </div>
 
                     <!-- Product Info -->
                     <div class="space-y-5">
                         <!-- Product Category -->
-                        <div class="flex items-center text-sm text-slate-500 uppercase tracking-wider font-semibold">
+                        <div class="flex items-center text-sm text-slate-300 uppercase tracking-wider font-semibold">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                             </svg>
@@ -281,15 +286,15 @@
                         </div>
 
                         <!-- Product Title -->
-                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-purple-600 transition-colors duration-300 leading-tight">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300 leading-tight">
                             ASUS ROG MAXIMUS Z790 DARK HERO
                         </h3>
 
                         <!-- Features -->
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full border border-purple-200">Intel Z790</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full border border-red-200">DDR5</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">WiFi 6E</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-400/30 backdrop-blur-sm">Intel Z790</span>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-300 text-xs font-semibold rounded-full border border-red-400/30 backdrop-blur-sm">DDR5</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full border border-blue-400/30 backdrop-blur-sm">WiFi 6E</span>
                         </div>
 
                         <!-- Rating and Price -->
@@ -299,21 +304,21 @@
                                     <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
                                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                                     </svg>
-                                    <span class="text-sm text-slate-700 ml-1 font-semibold">4.8</span>
+                                    <span class="text-sm text-slate-200 ml-1 font-semibold">4.8</span>
                                 </div>
-                                <span class="text-sm text-slate-500">(89 reviews)</span>
+                                <span class="text-sm text-slate-400">(89 reviews)</span>
                             </div>
                         </div>
 
                         <!-- Price -->
-                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                                     300,000
                                 </span>
-                                <span class="text-lg text-slate-600 ml-1 font-semibold">LKR</span>
+                                <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-purple-500">
+                            <button class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-purple-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
@@ -322,10 +327,10 @@
             </div>
 
             <!-- Product 3: G.SKILL Memory - Emerald Theme -->
-            <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-slate-200">
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/60 to-teal-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            <div class="group relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-emerald-500/20 transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-white/20 hover:border-emerald-400/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 
-                <div class="relative p-8">
+                <div class="relative p-10">
                     <!-- Product Badge -->
                     <div class="absolute top-6 right-6 z-10">
                         <span class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-bold rounded-full shadow-lg border border-emerald-400">
@@ -345,7 +350,7 @@
                     <!-- Product Info -->
                     <div class="space-y-5">
                         <!-- Product Category -->
-                        <div class="flex items-center text-sm text-slate-500 uppercase tracking-wider font-semibold">
+                        <div class="flex items-center text-sm text-slate-300 uppercase tracking-wider font-semibold">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
                             </svg>
@@ -353,7 +358,7 @@
                         </div>
 
                         <!-- Product Title -->
-                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors duration-300 leading-tight">
+                        <h3 class="text-2xl font-bold text-white group-hover:text-emerald-600 transition-colors duration-300 leading-tight">
                             G.SKILL TridentZ RGB NEO 16GB
                         </h3>
 
@@ -371,21 +376,237 @@
                                     <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
                                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                                     </svg>
-                                    <span class="text-sm text-slate-700 ml-1 font-semibold">4.7</span>
+                                    <span class="text-sm text-slate-200 ml-1 font-semibold">4.7</span>
                                 </div>
-                                <span class="text-sm text-slate-500">(203 reviews)</span>
+                                <span class="text-sm text-slate-300">(203 reviews)</span>
                             </div>
                         </div>
 
                         <!-- Price -->
-                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
                                 <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
                                     12,000
                                 </span>
-                                <span class="text-lg text-slate-600 ml-1 font-semibold">LKR</span>
+                                <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
                             <button class="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-emerald-500">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4: Intel Core i9 - Orange Theme -->
+            <div class="group relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-white/20 hover:border-orange-400/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-50/60 to-red-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                <div class="relative p-10">
+                    <!-- Product Badge -->
+                    <div class="absolute top-6 right-6 z-10">
+                        <span class="px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 text-white text-xs font-bold rounded-full shadow-lg border border-orange-400">
+                            ✦ HIGH PERFORMANCE ✦
+                        </span>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                        <img src="{{asset('images/Intel Core i9 14900KS .png')}}" alt="Intel Core i9-14900KS" 
+                             class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="space-y-5">
+                        <!-- Product Category -->
+                        <div class="flex items-center text-sm text-slate-300 uppercase tracking-wider font-semibold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                            Processor
+                        </div>
+
+                        <!-- Product Title -->
+                        <h3 class="text-2xl font-bold text-white group-hover:text-orange-600 transition-colors duration-300 leading-tight">
+                            Intel Core i9-14900KS
+                        </h3>
+
+                        <!-- Features -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs font-semibold rounded-full border border-orange-200">24 Cores</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full border border-red-200">6.0 GHz</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">LGA 1700</span>
+                        </div>
+
+                        <!-- Rating and Price -->
+                        <div class="flex items-center justify-between pt-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                    <span class="text-sm text-slate-200 ml-1 font-semibold">4.9</span>
+                                </div>
+                                <span class="text-sm text-slate-300">(345 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                            <div>
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">
+                                    425,000
+                                </span>
+                                <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
+                            </div>
+                            <button class="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-xl hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-orange-500">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5: Samsung SSD - Cyan Theme -->
+            <div class="group relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-white/20 hover:border-orange-400/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-cyan-50/60 to-blue-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                <div class="relative p-10">
+                    <!-- Product Badge -->
+                    <div class="absolute top-6 right-6 z-10">
+                        <span class="px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs font-bold rounded-full shadow-lg border border-cyan-400">
+                            ✦ LIGHTNING FAST ✦
+                        </span>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                        <img src="{{asset('images/CORSAIR VENGEANCE 16GB DDR5.png')}}" alt="CORSAIR VENGEANCE DDR5" 
+                             class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="space-y-5">
+                        <!-- Product Category -->
+                        <div class="flex items-center text-sm text-slate-300 uppercase tracking-wider font-semibold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                            Memory
+                        </div>
+
+                        <!-- Product Title -->
+                        <h3 class="text-2xl font-bold text-white group-hover:text-cyan-600 transition-colors duration-300 leading-tight">
+                            Corsair Vengeance 16GB DDR5
+                        </h3>
+
+                        <!-- Features -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-800 text-xs font-semibold rounded-full border border-cyan-200">DDR5</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full border border-green-200">5600MHz</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full border border-purple-200">16GB</span>
+                        </div>
+
+                        <!-- Rating and Price -->
+                        <div class="flex items-center justify-between pt-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                    <span class="text-sm text-slate-200 ml-1 font-semibold">4.8</span>
+                                </div>
+                                <span class="text-sm text-slate-300">(156 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                            <div>
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">
+                                    45,000
+                                </span>
+                                <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
+                            </div>
+                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6: Corsair PSU - Yellow Theme -->
+            <div class="group relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-orange-500/20 transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-white/20 hover:border-orange-400/50">
+                <div class="absolute inset-0 bg-gradient-to-br from-yellow-50/60 to-amber-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                <div class="relative p-10">
+                    <!-- Product Badge -->
+                    <div class="absolute top-6 right-6 z-10">
+                        <span class="px-4 py-2 bg-gradient-to-r from-yellow-600 to-amber-600 text-white text-xs font-bold rounded-full shadow-lg border border-yellow-400">
+                            ✦ 80+ GOLD ✦
+                        </span>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                        <img src="{{asset('images/ASUS PRIME A520M-A II.png')}}" alt="ASUS Motherboard" 
+                             class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="space-y-5">
+                        <!-- Product Category -->
+                        <div class="flex items-center text-sm text-slate-300 uppercase tracking-wider font-semibold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                            Motherboard
+                        </div>
+
+                        <!-- Product Title -->
+                        <h3 class="text-2xl font-bold text-white group-hover:text-yellow-600 transition-colors duration-300 leading-tight">
+                            ASUS PRIME A520M-A II
+                        </h3>
+
+                        <!-- Features -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full border border-yellow-200">AMD A520</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full border border-green-200">DDR4</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">Micro ATX</span>
+                        </div>
+
+                        <!-- Rating and Price -->
+                        <div class="flex items-center justify-between pt-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                    <span class="text-sm text-slate-200 ml-1 font-semibold">4.9</span>
+                                </div>
+                                <span class="text-sm text-slate-300">(278 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                            <div>
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-amber-600">
+                                    35,000
+                                </span>
+                                <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
+                            </div>
+                            <button class="px-6 py-3 bg-gradient-to-r from-yellow-600 to-amber-600 text-white font-bold rounded-xl hover:from-yellow-700 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-yellow-500">
                                 View Details
                             </button>
                         </div>
