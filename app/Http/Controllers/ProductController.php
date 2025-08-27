@@ -138,6 +138,66 @@ class ProductController extends Controller
     return view('pages.rams', compact('rams'));
     }
 
+    public function categoryProducts($categorySlug)
+    {
+        // Find category by name (case-insensitive)
+        $category = Category::whereRaw('LOWER(name) = ?', [strtolower($categorySlug)])->first();
+        
+        if (!$category) {
+            abort(404, 'Category not found');
+        }
+
+        // Fetch products for this category
+        $products = Product::where('category_id', $category->id)->get();
+        
+        // Determine view name based on category
+        $viewName = $this->getCategoryViewName($category->name);
+        
+        return view($viewName, [
+            'category' => $category,
+            'products' => $products,
+            $this->getCategoryVariableName($category->name) => $products
+        ]);
+    }
+
+    private function getCategoryViewName($categoryName)
+    {
+        $name = strtolower($categoryName);
+        switch ($name) {
+            case 'laptops':
+                return 'pages.laptops';
+            case 'graphic cards':
+                return 'pages.graphiccards';
+            case 'ram':
+                return 'pages.rams';
+            case 'processors':
+                return 'pages.processors';
+            case 'motherboards':
+                return 'pages.motherboards';
+            default:
+                return 'pages.general-category';
+        }
+    }
+
+    private function getCategoryVariableName($categoryName)
+    {
+        $name = strtolower($categoryName);
+        switch ($name) {
+            case 'laptops':
+                return 'laptops';
+            case 'graphic cards':
+                return 'graphicCards';
+            case 'ram':
+                return 'rams';
+            case 'processors':
+                return 'processors';
+            case 'motherboards':
+                return 'motherboards';
+            default:
+                return 'products';
+        }
+    }
+
     
 }
 

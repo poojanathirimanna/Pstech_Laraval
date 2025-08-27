@@ -80,6 +80,9 @@ Route::get('/rams', [ProductController::class, 'rams'])->name('pages.rams');
 Route::get('/processors', [ProductController::class, 'processors'])->name('pages.processors');
 Route::get('/motherboards', [ProductController::class, 'motherboards'])->name('pages.motherboards');
 
+// Dynamic category route (for new categories)
+Route::get('/category/{categorySlug}', [ProductController::class, 'categoryProducts'])->name('pages.category');
+
 // Admin Routes (Managing Categories)
 
 // Admin Routes (for categories)

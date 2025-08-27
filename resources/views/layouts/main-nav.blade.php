@@ -42,40 +42,40 @@
                         <!-- Dropdown Menu -->
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute left-0 mt-2 w-56 bg-gray-900/95 backdrop-blur-sm border border-purple-500/20 rounded-xl shadow-2xl z-50">
                             <div class="py-2">
-                                <a href="{{ route('pages.laptops') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                    Gaming Laptops
-                                </a>
-                                <a href="{{ route('pages.graphiccards') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                                    </svg>
-                                    Graphics Cards
-                                </a>
-                                <a href="{{ route('pages.processors') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                                    </svg>
-                                    Gaming CPUs
-                                </a>
-                                <a href="{{ route('pages.motherboards') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                                    </svg>
-                                    Motherboards
-                                </a>
-                                <a href="{{ route('pages.rams') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                    </svg>
-                                    Gaming RAM
-                                </a>
+                                @foreach($globalCategories as $category)
+                                    <a href="{{ $category->name === 'Laptops' ? route('pages.laptops') : 
+                                               ($category->name === 'Graphic Cards' ? route('pages.graphiccards') : 
+                                               ($category->name === 'RAM' ? route('pages.rams') : 
+                                               ($category->name === 'Processors' ? route('pages.processors') : 
+                                               ($category->name === 'Motherboards' ? route('pages.motherboards') : 
+                                               route('pages.category', strtolower($category->name)))))) }}" 
+                                       class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
+                                        <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            @if($category->name === 'Laptops')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                            @elseif($category->name === 'Graphic Cards')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                                            @elseif($category->name === 'Processors')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                                            @elseif($category->name === 'Motherboards')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                            @elseif($category->name === 'RAM')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                            @else
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                            @endif
+                                        </svg>
+                                        {{ $category->name === 'RAM' ? 'Gaming RAM' : 
+                                           ($category->name === 'Laptops' ? 'Gaming Laptops' : 
+                                           ($category->name === 'Processors' ? 'Gaming CPUs' : $category->name)) }}
+                                    </a>
+                                @endforeach
                                 <div class="border-t border-purple-500/20 my-2"></div>
                                 <a href="{{ route('products.index') }}" class="flex items-center px-4 py-3 text-blue-400 hover:text-blue-300 hover:bg-blue-600/20 transition-colors duration-300 font-medium">
-                                    
-                                    
+                                    <svg class="w-5 h-5 text-blue-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                    </svg>
+                                    All Products
                                 </a>
                             </div>
                         </div>
@@ -111,36 +111,34 @@
                         <!-- Dropdown Menu -->
                         <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute left-0 mt-2 w-56 bg-gray-900/95 backdrop-blur-sm border border-purple-500/20 rounded-xl shadow-2xl z-50">
                             <div class="py-2">
-                                <a href="{{ route('pages.laptops') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                    Gaming Laptops
-                                </a>
-                                <a href="{{ route('pages.graphiccards') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                                    </svg>
-                                    Graphics Cards
-                                </a>
-                                <a href="{{ route('pages.processors') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                                    </svg>
-                                    Gaming CPUs
-                                </a>
-                                <a href="{{ route('pages.motherboards') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                                    </svg>
-                                    Motherboards
-                                </a>
-                                <a href="{{ route('pages.rams') }}" class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
-                                    <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                    </svg>
-                                    Gaming RAM
-                                </a>
+                                @foreach($globalCategories as $category)
+                                    <a href="{{ $category->name === 'Laptops' ? route('pages.laptops') : 
+                                               ($category->name === 'Graphic Cards' ? route('pages.graphiccards') : 
+                                               ($category->name === 'RAM' ? route('pages.rams') : 
+                                               ($category->name === 'Processors' ? route('pages.processors') : 
+                                               ($category->name === 'Motherboards' ? route('pages.motherboards') : 
+                                               route('pages.category', strtolower($category->name)))))) }}" 
+                                       class="flex items-center px-4 py-3 text-gray-300 hover:text-white hover:bg-purple-600/20 transition-colors duration-300">
+                                        <svg class="w-5 h-5 text-purple-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            @if($category->name === 'Laptops')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                            @elseif($category->name === 'Graphic Cards')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                                            @elseif($category->name === 'Processors')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                                            @elseif($category->name === 'Motherboards')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                            @elseif($category->name === 'RAM')
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                            @else
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                            @endif
+                                        </svg>
+                                        {{ $category->name === 'RAM' ? 'Gaming RAM' : 
+                                           ($category->name === 'Laptops' ? 'Gaming Laptops' : 
+                                           ($category->name === 'Processors' ? 'Gaming CPUs' : $category->name)) }}
+                                    </a>
+                                @endforeach
                                 @if(Auth::user()->role === 'admin')
                                     <div class="border-t border-purple-500/20 my-2"></div>
                                     <a href="{{ route('admin.categories.index') }}" class="flex items-center px-4 py-3 text-blue-400 hover:text-blue-300 hover:bg-blue-600/20 transition-colors duration-300 font-medium">
