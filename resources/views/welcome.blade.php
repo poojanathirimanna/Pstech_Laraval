@@ -5,7 +5,16 @@
 <section class="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-slate-800 to-blue-900">
     <!-- Subtle Background Pattern -->
     <div class="absolute inset-0 opacity-10">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
+        <div class="absolute inset-0" style="background-image: radial-g                        <!-- Price -->
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                            <div>
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-600">
+                                    85,000
+                                </span>
+                                <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
+                            </div>
+                            <button class="px-6 py-3 bg-gradient-to-r from-emerald-600 to-emerald-600 text-white font-bold rounded-xl hover:from-emerald-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-emerald-500/50 backdrop-blur-sm">
+                                View Detailsrcle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
     </div>
 
     <!-- Premium Carousel with Fixed Bootstrap Integration -->
@@ -241,12 +250,12 @@
                         <!-- Price -->
                         <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-600">
                                     529,000
                                 </span>
                                 <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-blue-500/50 backdrop-blur-sm">
+                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
@@ -313,12 +322,12 @@
                         <!-- Price -->
                         <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-600">
                                     300,000
                                 </span>
                                 <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-purple-500/50 backdrop-blur-sm">
+                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
@@ -385,12 +394,12 @@
                         <!-- Price -->
                         <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
-                                    12,000
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-600">
+                                    85,000
                                 </span>
                                 <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-emerald-500">
+                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
@@ -457,12 +466,12 @@
                         <!-- Price -->
                         <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-600">
                                     425,000
                                 </span>
                                 <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-bold rounded-xl hover:from-orange-700 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-orange-500">
+                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
@@ -529,12 +538,12 @@
                         <!-- Price -->
                         <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-600">
                                     45,000
                                 </span>
                                 <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500">
+                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
@@ -580,9 +589,9 @@
 
                         <!-- Features -->
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full border border-yellow-200">AMD A520</span>
-                            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full border border-green-200">DDR4</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">Micro ATX</span>
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-semibold rounded-full border border-yellow-400/30 backdrop-blur-sm">AMD A520</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-300 text-xs font-semibold rounded-full border border-green-400/30 backdrop-blur-sm">DDR4</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs font-semibold rounded-full border border-blue-400/30 backdrop-blur-sm">Micro ATX</span>
                         </div>
 
                         <!-- Rating and Price -->
@@ -601,12 +610,12 @@
                         <!-- Price -->
                         <div class="flex items-center justify-between pt-6 border-t border-white/10">
                             <div>
-                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-amber-600">
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-600">
                                     35,000
                                 </span>
                                 <span class="text-lg text-slate-300 ml-1 font-semibold">LKR</span>
                             </div>
-                            <button class="px-6 py-3 bg-gradient-to-r from-yellow-600 to-amber-600 text-white font-bold rounded-xl hover:from-yellow-700 hover:to-amber-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-yellow-500">
+                            <button class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-600 text-white font-bold rounded-xl hover:from-cyan-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-cyan-500/50 backdrop-blur-sm">
                                 View Details
                             </button>
                         </div>
