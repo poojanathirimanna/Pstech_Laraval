@@ -90,7 +90,7 @@
                 @auth
                     <!-- Authenticated User Navigation Links -->
                     @if(Auth::user()->role === 'admin')
-                        <a href="{{ route('dashboard') }}" class="text-gray-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all duration-300 font-medium {{ request()->routeIs('dashboard') ? 'bg-white/20 text-white' : '' }}">
+                        <a href="{{ route('admin.dashboard') }}" class="text-gray-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all duration-300 font-medium {{ request()->routeIs('dashboard') ? 'bg-white/20 text-white' : '' }}">
                             Admin Dashboard
                         </a>
                     @endif
@@ -306,7 +306,7 @@
             @auth
                 <!-- Authenticated Mobile Menu -->
                 @if(Auth::user()->role === 'admin')
-                    <a href="{{ route('dashboard') }}" class="block text-gray-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all duration-300 {{ request()->routeIs('dashboard') ? 'bg-white/20 text-white' : '' }}">
+                    <a href="{{ route('admin.dashboard') }}" class="block text-gray-300 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg transition-all duration-300 {{ request()->routeIs('dashboard') ? 'bg-white/20 text-white' : '' }}">
                         Admin Dashboard
                     </a>
                 @endif
