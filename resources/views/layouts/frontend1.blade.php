@@ -48,7 +48,6 @@
 
     <!-- Footer -->
     @include('layouts.footer')
-    @include('layouts.footer')
 
     <!-- Livewire Scripts -->
     @livewireScripts

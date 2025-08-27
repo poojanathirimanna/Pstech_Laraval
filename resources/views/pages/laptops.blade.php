@@ -1,7 +1,7 @@
 @extends('layouts.frontend1')
 
 @section('pages')
-<main class="p-8 bg-gray-900 text-white ml-16">
+<main class="p-8 bg-gray-900 text-white">
     <div class="min-h-[80vh]">
         <h1 class="text-3xl text-center font-bold mb-6">Laptops</h1>
 

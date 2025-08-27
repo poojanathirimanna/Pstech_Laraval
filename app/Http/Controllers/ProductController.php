@@ -129,6 +129,15 @@ class ProductController extends Controller
     return view('pages.motherboards', compact('motherboards'));
     }
 
+    public function rams()
+    {
+    // Fetch products where category_id matches RAMs
+    $rams = Product::where('category_id', 3)->get(); // 3 is the ID for RAMs
+
+    // Pass the RAMs to the view
+    return view('pages.rams', compact('rams'));
+    }
+
     
 }
 
