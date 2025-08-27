@@ -49,6 +49,14 @@ class User extends Authenticatable
         ];
     }
 
+    /**
+     * Get the orders for the user.
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
     public function generateToken()
     {
         return $this->createToken($this->email . '-auth-token')->plainTextToken;
