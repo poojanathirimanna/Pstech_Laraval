@@ -1,119 +1,401 @@
 @extends('layouts.frontend')
-@section('pages') 
+@section('pages')
 
-<!-- Main Content -->
-<main>
- <div id="customCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-keyboard="false">
-
-<div class="carousel-indicators">
-    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#customCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-</div>
-
-
-<div class="carousel-inner">
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-        <img src="{{ asset('images/GAMING.jpg') }}" class="d-block w-100" alt="Slide 1">
-        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h1>The Best PC Parts and Gaming Accessories in Town</h1>
-            <br>
-            <p>we offer everything you need to build or upgrade your gaming rig. Perfect for gamers and tech enthusiasts seeking quality, reliability, and top-notch performance.!</p>
-            <br>
-            <br>
-            <a href="/laptops" class="btn custom-view-more-btn text-[#F7941D]">VIEW MORE</a>
-
-        </div>
+<!-- Professional Hero Section with Elegant Dark Theme -->
+<section class="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-slate-800 to-blue-900">
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 20px 20px;"></div>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="carousel-item">
-        <img src="{{ asset('images/A2.jpg') }}" class="d-block w-100" alt="Slide 2">
-        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-        
-            <h1>BUILDING NEW EXPERIENCES</h1>
-            <br>
-            <p>Embark on a journey of innovation with our cutting-edge products designed for building new experiences. Whether it's creating immersive gaming setups or crafting state-of-the-art PC builds, we provide the tools and accessories to transform your vision into reality. </p>
-            <br>
-            <br> 
-            <a href="/laptops" class="btn custom-view-more-btn text-[#F7941D]">VIEW MORE</a>
+    <!-- Premium Carousel with Fixed Bootstrap Integration -->
+    <div id="heroCarousel" class="carousel slide h-screen" data-bs-ride="carousel" data-bs-interval="5000" data-bs-keyboard="true" data-bs-touch="true">
+        <!-- Elegant Professional Indicators -->
+        <div class="carousel-indicators bottom-12" style="margin-bottom: 3rem;">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" 
+                    class="active" 
+                    style="width: 60px; height: 4px; background: linear-gradient(90deg, #3B82F6, #6366F1); border-radius: 2px; border: none; opacity: 1;" 
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" 
+                    style="width: 30px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 2px; border: none; margin-left: 12px;" 
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" 
+                    style="width: 30px; height: 4px; background: rgba(255,255,255,0.5); border-radius: 2px; border: none; margin-left: 12px;" 
+                    aria-label="Slide 3"></button>
         </div>
-    </div>
 
-    <!-- Slide 3 -->
-    <div class="carousel-item">
-        <img src="{{ asset('images/GTX_1080TI.jpg') }}" class="d-block w-100" alt="Slide 3">
-        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <h1>CUSTOMIZE YOUR DREAM</h1>
-            <br>
+        <div class="carousel-inner h-full">
+            <!-- Slide 1: Gaming Excellence - Blue Theme -->
+            <div class="carousel-item active h-full">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-blue-900/80 to-indigo-900/70"></div>
+                    <img src="{{ asset('images/GAMING.jpg') }}" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Professional Gaming Setup">
+                </div>
+                <div class="carousel-caption absolute inset-0 flex items-center justify-center z-10">
+                    <div class="max-w-6xl mx-auto px-6 text-center">
+                        <div class="mb-8">
+                            <span class="inline-block px-6 py-3 bg-blue-600/30 backdrop-blur-sm rounded-full text-blue-200 font-semibold text-sm uppercase tracking-wider border border-blue-400/40">
+                                ✦ Premium Technology ✦
+                            </span>
+                        </div>
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                            Elite <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-400">Gaming</span><br>
+                            <span class="text-2xl md:text-4xl lg:text-5xl font-light text-gray-200">Ecosystem</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+                            Professional-grade components engineered for enthusiasts who demand uncompromising performance, reliability, and cutting-edge innovation.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                            <a href="/laptops" class="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl min-w-[180px] text-base">
+                                <span class="relative z-10 flex items-center justify-center">
+                                    Explore Collection
+                                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <p>Turn your vision into reality with our customizable options to create your dream setup. Whether it’s a high-performance gaming rig or a sleek workstation, we offer the flexibility and components to design a setup that perfectly matches your needs.</p>
-            <br>
-            <br>
-            <a href="/laptops" class="btn custom-view-more-btn text-[#F7941D]">VIEW MORE</a>
+            <!-- Slide 2: Innovation Focus - Purple Theme -->
+            <div class="carousel-item h-full">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-purple-900/80 to-violet-900/70"></div>
+                    <img src="{{ asset('images/A2.jpg') }}" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Innovation in Technology">
+                </div>
+                <div class="carousel-caption absolute inset-0 flex items-center justify-center z-10">
+                    <div class="max-w-6xl mx-auto px-6 text-center">
+                        <div class="mb-8">
+                            <span class="inline-block px-6 py-3 bg-purple-600/30 backdrop-blur-sm rounded-full text-purple-200 font-semibold text-sm uppercase tracking-wider border border-purple-400/40">
+                                ✦ Innovation Driven ✦
+                            </span>
+                        </div>
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                            Future-Ready<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-violet-400">Technology</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+                            Revolutionary solutions that redefine possibilities. Build immersive experiences with state-of-the-art components designed for tomorrow's challenges.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                            <a href="/laptops" class="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-xl min-w-[180px] text-base">
+                                <span class="relative z-10 flex items-center justify-center">
+                                    Discover Innovation
+                                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Customization Focus - Emerald Theme -->
+            <div class="carousel-item h-full">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-emerald-900/80 to-teal-900/70"></div>
+                    <img src="{{ asset('images/GTX_1080TI.jpg') }}" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Custom PC Building">
+                </div>
+                <div class="carousel-caption absolute inset-0 flex items-center justify-center z-10">
+                    <div class="max-w-6xl mx-auto px-6 text-center">
+                        <div class="mb-8">
+                            <span class="inline-block px-6 py-3 bg-emerald-600/30 backdrop-blur-sm rounded-full text-emerald-200 font-semibold text-sm uppercase tracking-wider border border-emerald-400/40">
+                                ✦ Bespoke Solutions ✦
+                            </span>
+                        </div>
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                            Craft Your Perfect<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Dream Setup</span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+                            Unlimited customization possibilities to create your ideal gaming rig or professional workstation. Your vision, our engineering excellence.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                            <a href="/laptops" class="group relative overflow-hidden px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transform hover:scale-105 transition-all duration-300 shadow-xl min-w-[180px] text-base">
+                                <span class="relative z-10 flex items-center justify-center">
+                                    Start Building
+                                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Premium Navigation Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" 
+                style="position: absolute; left: 5rem; top: 50%; transform: translateY(-50%); opacity: 0.9; background: none; border: none; z-index: 1050;">
+            <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/30"
+                 style="width: 4rem; height: 4rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 1.75rem; height: 1.75rem; color: white;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </div>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next"
+                style="position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); opacity: 0.9; background: none; border: none; z-index: 1050;">
+            <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/30"
+                 style="width: 4rem; height: 4rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.3); transition: all 0.3s ease;">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 1.75rem; height: 1.75rem; color: white;">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-</div>
+</section>
 
+<!-- Professional Product Showcase with Dark Elegant Theme -->
+<section class="py-24 bg-gradient-to-b from-slate-100 to-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Premium Section Header -->
+        <div class="text-center mb-20">
+            <div class="inline-flex items-center justify-center mb-8">
+                <div class="h-px bg-gradient-to-r from-transparent via-slate-400 to-transparent w-32"></div>
+                <span class="mx-8 px-6 py-3 bg-gradient-to-r from-slate-800 to-slate-700 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-xl">
+                    ✦ Featured Collection ✦
+                </span>
+                <div class="h-px bg-gradient-to-r from-transparent via-slate-400 to-transparent w-32"></div>
+            </div>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+                Latest <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">Arrivals</span>
+            </h2>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Discover our curated selection of premium components, engineered for exceptional performance and cutting-edge innovation.
+            </p>
+        </div>
 
-<button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-</button>
-</div>
-            
-
+        <!-- Premium Product Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Product 1: RTX 4080 - Blue Theme -->
+            <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-slate-200">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-50/60 to-indigo-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 
-    
-    <!-- Special Offers Title -->
-    <div class="text-center text-[#F7941D] text-4xl font-bold mb-6">
-        <h2 class="inline-block border-b-4 border-[#F7941D]">
-           * NEW ARRIVALS *<span class="text-2xl"></span>
-        </h2>
-    </div>
-    
+                <div class="relative p-8">
+                    <!-- Product Badge -->
+                    <div class="absolute top-6 right-6 z-10">
+                        <span class="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold rounded-full shadow-lg border border-blue-400">
+                            ✦ NEW ARRIVAL ✦
+                        </span>
+                    </div>
 
-    <!-- Special Offers Grid -->
-    <div class="w-58 h-58 grid grid-cols-1 md:grid-cols-3 gap-4 justify-center px-4">
-    <!-- Offer 1 -->
-    <div class="bg-gray-800 text-white rounded-lg shadow-lg p-4 transition duration-300 hover:scale-105">
-        <div class="relative">
-            <img src="{{asset( 'images/rtx4080.png')}}" alt="MSI G27C4X" class="w-full h-auto">
+                    <!-- Product Image -->
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                        <img src="{{asset('images/rtx4080.png')}}" alt="MSI RTX 4080 SUPER" 
+                             class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="space-y-5">
+                        <!-- Product Category -->
+                        <div class="flex items-center text-sm text-slate-500 uppercase tracking-wider font-semibold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                            Graphics Card
+                        </div>
+
+                        <!-- Product Title -->
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                            MSI RTX 4080 SUPER GAMING SLIM 16GB
+                        </h3>
+
+                        <!-- Features -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">16GB GDDR6X</span>
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded-full border border-emerald-200">4K Ready</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full border border-purple-200">Ray Tracing</span>
+                        </div>
+
+                        <!-- Rating and Price -->
+                        <div class="flex items-center justify-between pt-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                    <span class="text-sm text-slate-700 ml-1 font-semibold">4.9</span>
+                                </div>
+                                <span class="text-sm text-slate-500">(127 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div>
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                                    529,000
+                                </span>
+                                <span class="text-lg text-slate-600 ml-1 font-semibold">LKR</span>
+                            </div>
+                            <button class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-blue-500">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2: ASUS Motherboard - Purple Theme -->
+            <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-slate-200">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-50/60 to-pink-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                <div class="relative p-8">
+                    <!-- Product Badge -->
+                    <div class="absolute top-6 right-6 z-10">
+                        <span class="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold rounded-full shadow-lg border border-purple-400">
+                            ✦ BESTSELLER ✦
+                        </span>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                        <img src="{{asset('images/ASUS ROG STRIX Z790.png')}}" alt="ASUS ROG MAXIMUS Z790" 
+                             class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="space-y-5">
+                        <!-- Product Category -->
+                        <div class="flex items-center text-sm text-slate-500 uppercase tracking-wider font-semibold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                            Motherboard
+                        </div>
+
+                        <!-- Product Title -->
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-purple-600 transition-colors duration-300 leading-tight">
+                            ASUS ROG MAXIMUS Z790 DARK HERO
+                        </h3>
+
+                        <!-- Features -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full border border-purple-200">Intel Z790</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full border border-red-200">DDR5</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">WiFi 6E</span>
+                        </div>
+
+                        <!-- Rating and Price -->
+                        <div class="flex items-center justify-between pt-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                    <span class="text-sm text-slate-700 ml-1 font-semibold">4.8</span>
+                                </div>
+                                <span class="text-sm text-slate-500">(89 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div>
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                                    300,000
+                                </span>
+                                <span class="text-lg text-slate-600 ml-1 font-semibold">LKR</span>
+                            </div>
+                            <button class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-purple-500">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3: G.SKILL Memory - Emerald Theme -->
+            <div class="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 overflow-hidden border border-slate-200">
+                <div class="absolute inset-0 bg-gradient-to-br from-emerald-50/60 to-teal-50/60 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                <div class="relative p-8">
+                    <!-- Product Badge -->
+                    <div class="absolute top-6 right-6 z-10">
+                        <span class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-xs font-bold rounded-full shadow-lg border border-emerald-400">
+                            ✦ SPECIAL OFFER ✦
+                        </span>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="relative mb-8 overflow-hidden rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 p-8">
+                        <img src="{{asset('images/G.SKILL TridentZ RGB NEO 16GB.png')}}" alt="G.SKILL TridentZ RGB NEO" 
+                             class="w-full h-56 object-contain group-hover:scale-110 transition-transform duration-700">
+                        
+                        <!-- Hover Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                    </div>
+
+                    <!-- Product Info -->
+                    <div class="space-y-5">
+                        <!-- Product Category -->
+                        <div class="flex items-center text-sm text-slate-500 uppercase tracking-wider font-semibold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                            Memory
+                        </div>
+
+                        <!-- Product Title -->
+                        <h3 class="text-2xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors duration-300 leading-tight">
+                            G.SKILL TridentZ RGB NEO 16GB
+                        </h3>
+
+                        <!-- Features -->
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-semibold rounded-full border border-emerald-200">DDR4-3600</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full border border-blue-200">RGB Lighting</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full border border-purple-200">16GB Kit</span>
+                        </div>
+
+                        <!-- Rating and Price -->
+                        <div class="flex items-center justify-between pt-3">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex items-center">
+                                    <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                                    </svg>
+                                    <span class="text-sm text-slate-700 ml-1 font-semibold">4.7</span>
+                                </div>
+                                <span class="text-sm text-slate-500">(203 reviews)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="flex items-center justify-between pt-6 border-t border-slate-200">
+                            <div>
+                                <span class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
+                                    12,000
+                                </span>
+                                <span class="text-lg text-slate-600 ml-1 font-semibold">LKR</span>
+                            </div>
+                            <button class="px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg border border-emerald-500">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3 class="text-lg font-bold mt-2">MSI RTX 4080 SUPER GAMING SLIM 16GB</h3>
-        <!-- <p class="text-[#F7941D] mt-1">- Monitors & Accessories -</p> -->
-        <p class="text-yellow-400 text-xl font-bold mt-1">529,000 LKR</p>
-        <!-- <p class="text-gray-400 line-through">(90,000 LKR)</p> -->
-    </div>
 
-    <!-- Offer 2 -->
-    <div class="bg-gray-900 text-white rounded-lg shadow-lg p-4 transition duration-300 hover:scale-105">
-        <div class="relative">
-            <img src="{{asset('images/ASUS ROG STRIX Z790.png')}}" alt="Asus Vivobook" class="w-full h-auto">
-        </div>
-        <h3 class="text-lg font-bold mt-2">ASUS ROG MAXIMUS Z790 DARK HERO</h3>
-        <!-- <p class="text-[#F7941D] mt-1">ASUS ROG MAXIMUS Z790 DARK HERO</p> -->
-        <p class="text-yellow-400 text-xl font-bold mt-1">300,000 LKR</p>
-        <!-- <p class="text-gray-400 line-through">(180,000 LKR)</p> -->
-    </div>
+        <!-- Call to Action Section -->
+        
+</section>
 
-    <!-- Offer 3 -->
-    <div class="bg-gray-900 text-white rounded-lg shadow-lg p-4 transition duration-300 hover:scale-105">
-        <div class="relative">
-            <img src="{{asset('images/G.SKILL TridentZ RGB NEO 16GB.png')}}" class="w-full h-auto">
-        </div>
-        <h3 class="text-lg font-bold mt-2">G.SKILL TridentZ RGB NEO 16GB</h3>
-        <!-- <p class="text-[#F7941D] mt-1">- Laptops -</p> -->
-        <p class="text-yellow-400 text-xl font-bold mt-1">12,000 LKR</p>
-        <!-- <p class="text-gray-400 line-through">(409,000 LKR)</p> -->
-    </div>
-</div>
-
-</main>
-</div>
 @endsection

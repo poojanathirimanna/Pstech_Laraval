@@ -1,3 +1,301 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Professional carousel enhancements */
+.carousel-indicators button {
+    border: none !important;
+    opacity: 1 !important;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.carousel-indicators button.active {
+    width: 60px !important;
+    background: linear-gradient(90deg, #3B82F6, #6366F1) !important;
+}
+
+.carousel-indicators button:not(.active) {
+    width: 30px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.carousel-indicators button:not(.active):hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+    width: 40px !important;
+}
+
+/* Enhanced carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.9 !important;
+    transition: all 0.3s ease !important;
+    background: none !important;
+    border: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin: auto !important;
+    z-index: 1050 !important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1 !important;
+    background: none !important;
+}
+
+.carousel-control-prev:hover div,
+.carousel-control-next:hover div {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: scale(1.1) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none !important;
+}
+
+/* Responsive carousel controls */
+@media (max-width: 768px) {
+    .carousel-control-prev {
+        left: 1rem !important;
+    }
+    
+    .carousel-control-next {
+        right: 1rem !important;
+    }
+}
+
+/* Smooth carousel transitions */
+.carousel-item {
+    transition: transform 0.8s ease-in-out !important;
+}
+
+/* Professional gradient animations */
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+}
+
+/* Enhanced button hover effects */
+.group:hover .group-hover\:scale-110 {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem);
+}
+
+.group:hover .group-hover\:translate-x-2 {
+    transform: translateX(0.5rem);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #6366f1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2563eb, #4f46e5);
+}
+
+/* Loading animation */
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Professional card shadows */
+.shadow-professional {
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-professional-lg {
+    box-shadow: 
+        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Product card hover effects */
+.product-card {
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-1rem) scale(1.02);
+}
+
+/* Text gradient animations */
+@keyframes text-gradient {
+    0%, 100% {
+        background-size: 200% 200%;
+        background-position: left center;
+    }
+    50% {
+        background-size: 200% 200%;
+        background-position: right center;
+    }
+}
+
+.animate-text-gradient {
+    animation: text-gradient 3s ease infinite;
+}
+
+/* Enhanced glass morphism */
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Modern focus states */
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Performance optimizations */
+.will-change-transform {
+    will-change: transform;
+}
+
+.gpu-acceleration {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Professional color palette */
+:root {
+    --primary-blue: #3B82F6;
+    --primary-indigo: #6366F1;
+    --primary-purple: #8B5CF6;
+    --primary-emerald: #10B981;
+    --secondary-slate: #475569;
+    --dark-slate: #1e293b;
+}
+
+/* Responsive design optimizations */
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px !important;
+        height: 50px !important;
+        margin: auto 10px !important;
+    }
+    
+    .carousel-indicators {
+        bottom: 10px !important;
+    }
+    
+    .carousel-indicators button {
+        width: 20px !important;
+        height: 4px !important;
+    }
+    
+    .carousel-indicators button.active {
+        width: 40px !important;
+    }
+}
+
+/* Enhanced transitions for smooth user experience */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth page transitions */
+.page-transition {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Enhanced backdrop support */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Professional button styles */
+.btn-professional {
+    background: linear-gradient(135deg, #3B82F6, #6366F1);
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-professional:hover {
+    background: linear-gradient(135deg, #2563EB, #4F46E5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Professional button styles */
+.btn-professional {
+    background: linear-gradient(135deg, #3B82F6, #6366F1);
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-professional:hover {
+    background: linear-gradient(135deg, #2563EB, #4F46E5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
