@@ -33,10 +33,10 @@
     </head>
 <body >
     <!-- Navigation Bar -->
-    @include('layouts.nav1')
+    @include('layouts.main-nav')
 
     <!-- Side Navigation Bar -->
-    @include('layouts.sidebar1')
+
     <div class="page-content ">
         @yield('pages')
     </div>

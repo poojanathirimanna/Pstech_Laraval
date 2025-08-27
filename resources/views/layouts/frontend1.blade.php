@@ -36,10 +36,10 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-    @include('layouts.nav1')
+    @include('layouts.main-nav')
 
     <!-- Side Navigation Bar -->
-    @include('layouts.sidebar')
+
 
     <!-- Main Content -->
     <div class="page-content">
@@ -47,6 +47,7 @@
     </div>
 
     <!-- Footer -->
+    @include('layouts.footer')
     @include('layouts.footer')
 
     <!-- Livewire Scripts -->

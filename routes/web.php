@@ -16,6 +16,7 @@ use App\Http\Controllers\OrderController;
 
 
 Route::get('/', [PageController::class, 'index'])->name('welcome');
+Route::get('/about', [PageController::class, 'about'])->name('about');
 // Route::get('/laptops', [PageController::class, 'laptops'])->name('pages.laptops');
 // Route::get('/graphiccards', [PageController::class, 'graphicCards'])->name('pages.graphiccards');
 // Route::get('/rams', [PageController::class, 'ram'])->name('pages.rams');

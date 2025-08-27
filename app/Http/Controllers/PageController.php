@@ -11,6 +11,11 @@ class PageController extends Controller
         return view('welcome');
     }
     
+    public function about()
+    {
+        return view('pages.about');
+    }
+    
     public function laptops()
     {
         return view('pages.laptops');
